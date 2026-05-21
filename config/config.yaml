@@ -1,0 +1,126 @@
+# =============================================================================
+# Sensör Füzyonu ve Lokalizasyon Kullanarak LiDAR Tabanlı Otonom Navigasyon
+# Ana konfigürasyon dosyası
+#
+# Bu dosya, simülasyon çekirdeği, sensör modelleri, robot kinematiği ve
+# (sonraki adımlarda eklenecek) lokalizasyon/navigasyon modüllerinin tüm
+# parametrelerini barındırır. Kod içine sabit gömülmez; her şey buradan
+# yönetilir.
+# =============================================================================
+
+experiment:
+  name: "baseline_warehouse"
+  description: "Depo içi taşıma robotu için temel senaryo (Adım 1 smoke test)."
+  random_seed: 42
+
+# ---------------- Ortam ------------------------------------------------------
+environment:
+  width: 50.0          # metre
+  height: 30.0         # metre
+  boundary_margin: 0.5 # robot başlangıç/hedefin duvardan uzaklığı
+  n_obstacles: 12      # >= 10 (ödev gereği)
+  obstacle:
+    type: "rectangle"        # "rectangle" | "circle" | "mixed"
+    min_size: 1.5            # m
+    max_size: 4.0            # m
+    min_clearance: 1.2       # engeller arası ve başlangıç/hedef güvenlik mesafesi
+  start: [3.0, 3.0]          # [x, y] (m)
+  goal:  [46.0, 27.0]        # [x, y] (m)
+  goal_tolerance: 0.6        # m, başarı yarıçapı
+
+# ---------------- Robot (diferansiyel sürüş, non-holonomic) ------------------
+robot:
+  radius: 0.35               # m, çarpışma yarıçapı
+  wheel_base: 0.5            # m, sol-sağ teker mesafesi
+  initial_theta: 0.0         # rad, gövde yönelimi (yoksa atanır)
+  limits:
+    v_max: 1.2               # m/s
+    v_min: -0.4              # m/s (geri vites sınırlı)
+    omega_max: 1.5           # rad/s
+    a_max: 1.0               # m/s^2 doğrusal ivme limiti
+    alpha_max: 2.5           # rad/s^2 açısal ivme limiti
+
+# ---------------- Simülasyon -------------------------------------------------
+simulation:
+  dt: 0.05                   # s, integrasyon adımı
+  max_time: 120.0            # s, en uzun simülasyon süresi
+  smoke_test_steps: 200      # Adım 1 smoke test için adım sayısı
+  open_loop:                 # Adım 2'de navigasyon yokken kullanılan komutlar
+    v: 0.6                   # m/s, sabit doğrusal hız
+    omega: 0.10              # rad/s, hafif yay
+  stop_on_collision: true
+  lidar_snapshot_t: 22.0     # s, LiDAR görseli için saklanan tarama anı
+
+# ---------------- Sensörler --------------------------------------------------
+sensors:
+  lidar:
+    max_range: 8.0           # m
+    min_range: 0.10          # m
+    n_beams: 180             # tarama başına ışın sayısı
+    fov_deg: 360.0           # tam dönüş (0..360)
+    range_noise_std: 0.03    # m, Gauss sigma
+    angle_noise_std: 0.002   # rad
+    dropout_prob: 0.01       # rastgele kayıp ölçüm oranı
+  imu:
+    gyro_noise_std: 0.015    # rad/s
+    gyro_bias: 0.002         # rad/s sabit bias
+    yaw_noise_std: 0.01      # rad (entegre edilmiş yönelim okuması)
+  encoder:
+    velocity_noise_std: 0.02 # m/s, her teker için
+    omega_noise_std: 0.01    # rad/s
+    quantization: 0.001      # m/s, opsiyonel niceleme (0 = kapalı)
+
+# ---------------- LiDAR işleme ----------------------------------------------
+lidar_processing:
+  median_window: 3           # menzil dizisi üzerinde tek boyutlu medyan filtre
+  cluster_eps: 0.30          # m, ardışık noktaların kümelenmesi için Euclidean eşik
+  min_cluster_size: 4        # daha küçük kümeler atılır
+  range_threshold_margin: 0.05  # max_range - margin altındakileri "geçerli" say
+
+# ---------------- Lokalizasyon ----------------------------------------------
+localization:
+  dead_reckoning:
+    source: "encoder"        # "encoder" | "model"
+  ekf:
+    initial_pose_sigma:
+      x: 0.05                # m
+      y: 0.05                # m
+      theta: 0.02            # rad
+    process_noise:           # kontrol uzayı gürültüsü (sigma)
+      v: 0.06                # m/s
+      omega: 0.04            # rad/s
+    measurement_noise:
+      imu_yaw_sigma: 0.05    # rad, R matrisi için
+    use_imu_update: true
+
+# ---------------- Navigasyon -------------------------------------------------
+navigation:
+  method: "rrt_apf"          # RRT global + APF lokal hibrit
+  rrt:
+    step_size: 1.5           # m, ağaç genişleme adımı
+    max_iters: 4000          # üst sınır
+    goal_bias: 0.10          # 0..1, rastlantı yerine hedefe doğrultma oranı
+    goal_threshold: 0.8      # m, hedefe yaklaşıldı sayma yarıçapı
+    safety_margin: 0.15      # m, robot yarıçapına ek emniyet payı
+    collision_check_resolution: 0.15  # m, segment çarpışma kontrol adımı
+    smoothing_iters: 250     # kısayol algoritması iterasyonu
+  apf:
+    k_attr: 1.0              # çekici kuvvet katsayısı
+    k_rep: 0.5               # itici kuvvet katsayısı
+    rep_distance: 1.8        # m, itici alan etki menzili
+    max_force_norm: 5.0      # toplam kuvvet üst sınırı
+  controller:
+    k_v: 0.95                # nominal v_cmd / v_max
+    k_omega: 1.6             # yön hatası -> ω kazancı
+    waypoint_threshold: 0.6  # m, sonraki waypoint'e geçme yarıçapı
+    heading_slowdown_rad: 1.05  # |α| bu değerden büyükse ileri hızı azalt
+    slowdown_factor: 0.3     # hız çarpanı (yerinde dönüş)
+    stuck_window_seconds: 4.0
+    stuck_threshold: 0.15    # m, bu kadar az hareket → stuck
+
+# ---------------- Çıktı yolları ----------------------------------------------
+output:
+  base_dir: "outputs"
+  figures_dir: "outputs/figures"
+  results_dir: "outputs/results"
+  log_file: "outputs/results/run.log"

@@ -1,0 +1,206 @@
+[2026-05-21 12:41:40] [INFO] ===============================================
+[2026-05-21 12:41:40] [INFO]   Simülasyon başlatılıyor: baseline_warehouse
+[2026-05-21 12:41:40] [INFO] ===============================================
+[2026-05-21 12:41:40] [INFO] Zaman: 2026-05-21T12:41:40
+[2026-05-21 12:41:40] [INFO] Random seed: 42
+[2026-05-21 12:41:40] [INFO] Konfigürasyon: config/config.yaml
+[2026-05-21 12:41:41] [INFO] Ortam: 50.0x30.0 m, 12 engel yerleştirildi (istenen 12).
+[2026-05-21 12:41:41] [INFO] Robot başlangıç pozu: x=3.00 y=3.00 theta=0.000 rad; r=0.35 m, L=0.50 m
+[2026-05-21 12:41:41] [INFO] Sensörler hazır: LiDAR(beam=180, range=8.0 m, sigma=0.030 m), IMU(sigma_gyro=0.015 rad/s, bias=0.002), Encoder(sigma_v=0.020 m/s)
+[2026-05-21 12:41:41] [INFO] Ortam haritası kaydedildi: outputs\figures\environment_map.png
+[2026-05-21 12:41:41] [INFO] ========================================
+[2026-05-21 12:41:41] [INFO]   Açık-döngü smoke test çalıştırılıyor
+[2026-05-21 12:41:41] [INFO] ========================================
+[2026-05-21 12:41:41] [INFO] Özet kaydedildi: outputs\results\step1_summary.json
+[2026-05-21 12:41:41] [INFO] ================================
+[2026-05-21 12:41:41] [INFO]   Adım 1 smoke test tamamlandı
+[2026-05-21 12:41:41] [INFO] ================================
+[2026-05-21 12:41:41] [INFO] Adım sayısı: 200  |  süre: 0.377 s  |  son poz: (7.89, 5.74, 1.00 rad)
+[2026-05-21 12:41:41] [INFO] LiDAR ortalama en yakın isabet: 2.529 m | Encoder ortalama v: 0.584 m/s | IMU son yaw: 1.008 rad
+[2026-05-21 12:49:28] [INFO] ===============================================
+[2026-05-21 12:49:28] [INFO]   Simülasyon başlatılıyor: baseline_warehouse
+[2026-05-21 12:49:28] [INFO] ===============================================
+[2026-05-21 12:49:28] [INFO] Zaman: 2026-05-21T12:49:28
+[2026-05-21 12:49:28] [INFO] Random seed: 42
+[2026-05-21 12:49:28] [INFO] Ortam haritası kaydedildi: outputs\figures\environment_map.png  (12 engel)
+[2026-05-21 12:49:28] [INFO] =========================================
+[2026-05-21 12:49:28] [INFO]   Simülasyon koşusu: baseline_warehouse
+[2026-05-21 12:49:28] [INFO] =========================================
+[2026-05-21 12:49:28] [INFO] dt=0.050s, max_steps=600, sensörler=[LiDAR, IMU, Encoder]
+[2026-05-21 12:49:40] [INFO] ===============================================
+[2026-05-21 12:49:40] [INFO]   Simülasyon başlatılıyor: baseline_warehouse
+[2026-05-21 12:49:40] [INFO] ===============================================
+[2026-05-21 12:49:40] [INFO] Zaman: 2026-05-21T12:49:40
+[2026-05-21 12:49:40] [INFO] Random seed: 42
+[2026-05-21 12:49:40] [INFO] Ortam haritası kaydedildi: outputs\figures\environment_map.png  (12 engel)
+[2026-05-21 12:49:40] [INFO] =========================================
+[2026-05-21 12:49:40] [INFO]   Simülasyon koşusu: baseline_warehouse
+[2026-05-21 12:49:40] [INFO] =========================================
+[2026-05-21 12:49:40] [INFO] dt=0.050s, max_steps=600, sensörler=[LiDAR, IMU, Encoder]
+[2026-05-21 12:49:41] [WARNING] Çarpışma — simülasyon t=5.95s'de durduruldu.
+[2026-05-21 12:49:41] [INFO] Koşum tamamlandı: 119 adım, 0.542s, sebep=collision
+[2026-05-21 12:49:41] [INFO] Yörünge kaydı: outputs\results\trajectory_data.csv
+[2026-05-21 12:49:41] [INFO] Metrikler:    outputs\results\metrics.csv
+[2026-05-21 12:49:41] [INFO] Özet:         outputs\results\experiment_summary.json
+[2026-05-21 12:49:41] [INFO] ===========================
+[2026-05-21 12:49:41] [INFO]   Lokalizasyon metrikleri
+[2026-05-21 12:49:41] [INFO] ===========================
+[2026-05-21 12:49:41] [INFO] dead_reckoning  | konum RMSE=0.0637 m  MAE=0.0545 m  | yön RMSE=0.0316 rad  MAE=0.0305 rad
+[2026-05-21 12:49:41] [INFO] ekf             | konum RMSE=0.0053 m  MAE=0.0051 m  | yön RMSE=0.0094 rad  MAE=0.0073 rad
+[2026-05-21 13:00:29] [INFO] ===============================================
+[2026-05-21 13:00:29] [INFO]   Simülasyon başlatılıyor: baseline_warehouse
+[2026-05-21 13:00:29] [INFO] ===============================================
+[2026-05-21 13:00:29] [INFO] Zaman: 2026-05-21T13:00:29
+[2026-05-21 13:00:29] [INFO] Random seed: 42
+[2026-05-21 13:00:29] [INFO] Ortam haritası kaydedildi: outputs\figures\environment_map.png  (12 engel)
+[2026-05-21 13:00:29] [INFO] ======================
+[2026-05-21 13:00:29] [INFO]   Yol planlama (RRT)
+[2026-05-21 13:00:29] [INFO] ======================
+[2026-05-21 13:00:30] [INFO] RRT yolu hazır: 221 düğüm, 273 iterasyon, 3 waypoint
+[2026-05-21 13:00:30] [INFO] =========================================
+[2026-05-21 13:00:30] [INFO]   Simülasyon koşusu: baseline_warehouse
+[2026-05-21 13:00:30] [INFO] =========================================
+[2026-05-21 13:00:30] [INFO] dt=0.050s, max_steps=2400, sensörler=[LiDAR, IMU, Encoder]
+[2026-05-21 13:00:34] [INFO] Hedefe ulaşıldı, t=47.25s.
+[2026-05-21 13:00:34] [INFO] Koşum tamamlandı: 946 adım, 4.333s, sebep=goal_reached
+[2026-05-21 13:00:34] [INFO] Planlanan yol: outputs\results\planned_path.csv (3 waypoint)
+[2026-05-21 13:00:34] [INFO] Yörünge kaydı: outputs\results\trajectory_data.csv
+[2026-05-21 13:00:34] [INFO] Metrikler:    outputs\results\metrics.csv
+[2026-05-21 13:00:34] [INFO] Özet:         outputs\results\experiment_summary.json
+[2026-05-21 13:00:34] [INFO] ===========================
+[2026-05-21 13:00:34] [INFO]   Lokalizasyon metrikleri
+[2026-05-21 13:00:34] [INFO] ===========================
+[2026-05-21 13:00:34] [INFO] dead_reckoning  | konum RMSE=0.4977 m  MAE=0.3374 m  | yön RMSE=0.0467 rad  MAE=0.0362 rad
+[2026-05-21 13:00:34] [INFO] ekf             | konum RMSE=0.0098 m  MAE=0.0086 m  | yön RMSE=0.0085 rad  MAE=0.0069 rad
+[2026-05-21 13:07:53] [INFO] ===============================================
+[2026-05-21 13:07:53] [INFO]   Simülasyon başlatılıyor: baseline_warehouse
+[2026-05-21 13:07:53] [INFO] ===============================================
+[2026-05-21 13:07:53] [INFO] Zaman: 2026-05-21T13:07:53
+[2026-05-21 13:07:53] [INFO] Random seed: 42
+[2026-05-21 13:07:53] [INFO] ======================
+[2026-05-21 13:07:53] [INFO]   Yol planlama (RRT)
+[2026-05-21 13:07:53] [INFO] ======================
+[2026-05-21 13:07:54] [INFO] RRT yolu hazır: ağaç=136 düğüm, 167 iter., 5 waypoint (smoothing sonrası)
+[2026-05-21 13:07:54] [INFO] =========================================
+[2026-05-21 13:07:54] [INFO]   Simülasyon koşusu: baseline_warehouse
+[2026-05-21 13:07:54] [INFO] =========================================
+[2026-05-21 13:07:54] [INFO] dt=0.050s, max_steps=2400, sensörler=[LiDAR, IMU, Encoder]
+[2026-05-21 13:07:57] [INFO] Hedefe ulaşıldı, t=45.80s.
+[2026-05-21 13:07:57] [INFO] Koşum tamamlandı: 917 adım, 3.874s, sebep=goal_reached
+[2026-05-21 13:07:57] [INFO] Planlanan yol: outputs\results\planned_path.csv (5 waypoint)
+[2026-05-21 13:07:57] [INFO] Yörünge kaydı: outputs\results\trajectory_data.csv
+[2026-05-21 13:07:57] [INFO] Metrikler:    outputs\results\metrics.csv
+[2026-05-21 13:07:57] [INFO] Özet:         outputs\results\experiment_summary.json
+[2026-05-21 13:07:57] [INFO] ===========================
+[2026-05-21 13:07:57] [INFO]   Lokalizasyon metrikleri
+[2026-05-21 13:07:57] [INFO] ===========================
+[2026-05-21 13:07:57] [INFO] dead_reckoning  | konum RMSE=1.2899 m  MAE=0.9337 m  | yön RMSE=0.0712 rad  MAE=0.0623 rad
+[2026-05-21 13:07:57] [INFO] ekf             | konum RMSE=0.0087 m  MAE=0.0079 m  | yön RMSE=0.0076 rad  MAE=0.0062 rad
+[2026-05-21 13:07:57] [INFO] ==================
+[2026-05-21 13:07:57] [INFO]   Görselleştirme
+[2026-05-21 13:07:57] [INFO] ==================
+[2026-05-21 13:07:59] [INFO]   environment_map        -> outputs\figures\environment_map.png
+[2026-05-21 13:07:59] [INFO]   trajectory_comparison  -> outputs\figures\trajectory_comparison.png
+[2026-05-21 13:07:59] [INFO]   lidar_raw_filtered     -> outputs\figures\lidar_raw_filtered.png
+[2026-05-21 13:07:59] [INFO]   lidar_clusters         -> outputs\figures\lidar_clusters.png
+[2026-05-21 13:07:59] [INFO]   localization_errors    -> outputs\figures\localization_errors.png
+[2026-05-21 13:07:59] [INFO]   rmse_mae_summary       -> outputs\figures\rmse_mae_summary.png
+[2026-05-21 19:42:15] [INFO] ===============================================
+[2026-05-21 19:42:15] [INFO]   Simülasyon başlatılıyor: baseline_warehouse
+[2026-05-21 19:42:15] [INFO] ===============================================
+[2026-05-21 19:42:15] [INFO] Zaman: 2026-05-21T19:42:15
+[2026-05-21 19:42:15] [INFO] Random seed: 42
+[2026-05-21 19:42:15] [INFO] ======================
+[2026-05-21 19:42:15] [INFO]   Yol planlama (RRT)
+[2026-05-21 19:42:15] [INFO] ======================
+[2026-05-21 19:42:15] [INFO] RRT yolu hazır: ağaç=151 düğüm, 222 iter., 7 waypoint (smoothing sonrası)
+[2026-05-21 19:42:15] [INFO] =========================================
+[2026-05-21 19:42:15] [INFO]   Simülasyon koşusu: baseline_warehouse
+[2026-05-21 19:42:15] [INFO] =========================================
+[2026-05-21 19:42:15] [INFO] dt=0.050s, max_steps=2400, sensörler=[LiDAR, IMU, Encoder]
+[2026-05-21 19:42:19] [INFO] Hedefe ulaşıldı, t=52.95s.
+[2026-05-21 19:42:19] [INFO] Koşum tamamlandı: 1060 adım, 4.622s, sebep=goal_reached
+[2026-05-21 19:42:19] [INFO] Planlanan yol: outputs\results\planned_path.csv (7 waypoint)
+[2026-05-21 19:42:19] [INFO] Yörünge kaydı: outputs\results\trajectory_data.csv
+[2026-05-21 19:42:19] [INFO] Metrikler:    outputs\results\metrics.csv
+[2026-05-21 19:42:19] [INFO] Özet:         outputs\results\experiment_summary.json
+[2026-05-21 19:42:19] [INFO] ===========================
+[2026-05-21 19:42:19] [INFO]   Lokalizasyon metrikleri
+[2026-05-21 19:42:19] [INFO] ===========================
+[2026-05-21 19:42:19] [INFO] dead_reckoning  | konum RMSE=1.1348 m  MAE=0.9660 m  | yön RMSE=0.0468 rad  MAE=0.0415 rad
+[2026-05-21 19:42:19] [INFO] ekf             | konum RMSE=0.0375 m  MAE=0.0348 m  | yön RMSE=0.0110 rad  MAE=0.0089 rad
+[2026-05-21 19:42:19] [INFO] ==================
+[2026-05-21 19:42:19] [INFO]   Görselleştirme
+[2026-05-21 19:42:19] [INFO] ==================
+[2026-05-21 19:42:20] [INFO]   environment_map        -> outputs\figures\environment_map.png
+[2026-05-21 19:42:20] [INFO]   trajectory_comparison  -> outputs\figures\trajectory_comparison.png
+[2026-05-21 19:42:20] [INFO]   lidar_raw_filtered     -> outputs\figures\lidar_raw_filtered.png
+[2026-05-21 19:42:20] [INFO]   lidar_clusters         -> outputs\figures\lidar_clusters.png
+[2026-05-21 19:42:20] [INFO]   localization_errors    -> outputs\figures\localization_errors.png
+[2026-05-21 19:42:20] [INFO]   rmse_mae_summary       -> outputs\figures\rmse_mae_summary.png
+[2026-05-21 19:43:05] [INFO] ===============================================
+[2026-05-21 19:43:05] [INFO]   Simülasyon başlatılıyor: baseline_warehouse
+[2026-05-21 19:43:05] [INFO] ===============================================
+[2026-05-21 19:43:05] [INFO] Zaman: 2026-05-21T19:43:05
+[2026-05-21 19:43:05] [INFO] Random seed: 42
+[2026-05-21 19:43:05] [INFO] ======================
+[2026-05-21 19:43:05] [INFO]   Yol planlama (RRT)
+[2026-05-21 19:43:05] [INFO] ======================
+[2026-05-21 19:43:05] [INFO] RRT yolu hazır: ağaç=94 düğüm, 111 iter., 2 waypoint (smoothing sonrası)
+[2026-05-21 19:43:05] [INFO] =========================================
+[2026-05-21 19:43:05] [INFO]   Simülasyon koşusu: baseline_warehouse
+[2026-05-21 19:43:05] [INFO] =========================================
+[2026-05-21 19:43:05] [INFO] dt=0.050s, max_steps=2400, sensörler=[LiDAR, IMU, Encoder]
+[2026-05-21 19:43:09] [INFO] Hedefe ulaşıldı, t=43.20s.
+[2026-05-21 19:43:09] [INFO] Koşum tamamlandı: 865 adım, 3.753s, sebep=goal_reached
+[2026-05-21 19:43:09] [INFO] Planlanan yol: outputs\results\planned_path.csv (2 waypoint)
+[2026-05-21 19:43:09] [INFO] Yörünge kaydı: outputs\results\trajectory_data.csv
+[2026-05-21 19:43:09] [INFO] Metrikler:    outputs\results\metrics.csv
+[2026-05-21 19:43:09] [INFO] Özet:         outputs\results\experiment_summary.json
+[2026-05-21 19:43:09] [INFO] ===========================
+[2026-05-21 19:43:09] [INFO]   Lokalizasyon metrikleri
+[2026-05-21 19:43:09] [INFO] ===========================
+[2026-05-21 19:43:09] [INFO] dead_reckoning  | konum RMSE=1.7394 m  MAE=1.2541 m  | yön RMSE=0.1126 rad  MAE=0.0894 rad
+[2026-05-21 19:43:09] [INFO] ekf             | konum RMSE=0.0277 m  MAE=0.0243 m  | yön RMSE=0.0115 rad  MAE=0.0088 rad
+[2026-05-21 19:43:09] [INFO] ==================
+[2026-05-21 19:43:09] [INFO]   Görselleştirme
+[2026-05-21 19:43:09] [INFO] ==================
+[2026-05-21 19:43:10] [INFO]   environment_map        -> outputs\figures\environment_map.png
+[2026-05-21 19:43:10] [INFO]   trajectory_comparison  -> outputs\figures\trajectory_comparison.png
+[2026-05-21 19:43:10] [INFO]   lidar_raw_filtered     -> outputs\figures\lidar_raw_filtered.png
+[2026-05-21 19:43:10] [INFO]   lidar_clusters         -> outputs\figures\lidar_clusters.png
+[2026-05-21 19:43:10] [INFO]   localization_errors    -> outputs\figures\localization_errors.png
+[2026-05-21 19:43:10] [INFO]   rmse_mae_summary       -> outputs\figures\rmse_mae_summary.png
+[2026-05-21 19:51:47] [INFO] ===============================================
+[2026-05-21 19:51:47] [INFO]   Simülasyon başlatılıyor: baseline_warehouse
+[2026-05-21 19:51:47] [INFO] ===============================================
+[2026-05-21 19:51:47] [INFO] Zaman: 2026-05-21T19:51:47
+[2026-05-21 19:51:47] [INFO] Random seed: 42
+[2026-05-21 19:51:47] [INFO] ======================
+[2026-05-21 19:51:47] [INFO]   Yol planlama (RRT)
+[2026-05-21 19:51:47] [INFO] ======================
+[2026-05-21 19:51:47] [INFO] RRT yolu hazır: ağaç=94 düğüm, 111 iter., 2 waypoint (smoothing sonrası)
+[2026-05-21 19:51:47] [INFO] =========================================
+[2026-05-21 19:51:47] [INFO]   Simülasyon koşusu: baseline_warehouse
+[2026-05-21 19:51:47] [INFO] =========================================
+[2026-05-21 19:51:47] [INFO] dt=0.050s, max_steps=2400, sensörler=[LiDAR, IMU, Encoder]
+[2026-05-21 19:51:51] [INFO] Hedefe ulaşıldı, t=43.20s.
+[2026-05-21 19:51:51] [INFO] Koşum tamamlandı: 865 adım, 3.647s, sebep=goal_reached
+[2026-05-21 19:51:51] [INFO] Planlanan yol: outputs\results\planned_path.csv (2 waypoint)
+[2026-05-21 19:51:51] [INFO] Yörünge kaydı: outputs\results\trajectory_data.csv
+[2026-05-21 19:51:51] [INFO] Metrikler:    outputs\results\metrics.csv
+[2026-05-21 19:51:51] [INFO] Özet:         outputs\results\experiment_summary.json
+[2026-05-21 19:51:51] [INFO] ===========================
+[2026-05-21 19:51:51] [INFO]   Lokalizasyon metrikleri
+[2026-05-21 19:51:51] [INFO] ===========================
+[2026-05-21 19:51:51] [INFO] dead_reckoning  | konum RMSE=1.7394 m  MAE=1.2541 m  | yön RMSE=0.1126 rad  MAE=0.0894 rad
+[2026-05-21 19:51:51] [INFO] ekf             | konum RMSE=0.0277 m  MAE=0.0243 m  | yön RMSE=0.0115 rad  MAE=0.0088 rad
+[2026-05-21 19:51:51] [INFO] ==================
+[2026-05-21 19:51:51] [INFO]   Görselleştirme
+[2026-05-21 19:51:51] [INFO] ==================
+[2026-05-21 19:51:52] [INFO]   environment_map        -> outputs\figures\environment_map.png
+[2026-05-21 19:51:52] [INFO]   trajectory_comparison  -> outputs\figures\trajectory_comparison.png
+[2026-05-21 19:51:52] [INFO]   lidar_raw_filtered     -> outputs\figures\lidar_raw_filtered.png
+[2026-05-21 19:51:52] [INFO]   lidar_clusters         -> outputs\figures\lidar_clusters.png
+[2026-05-21 19:51:52] [INFO]   localization_errors    -> outputs\figures\localization_errors.png
+[2026-05-21 19:51:52] [INFO]   rmse_mae_summary       -> outputs\figures\rmse_mae_summary.png

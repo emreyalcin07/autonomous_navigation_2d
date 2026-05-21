@@ -1,0 +1,33 @@
+# Bonus senaryo: yüksek sensör gürültüsü altında dayanıklılık testi.
+# Baz konfigürasyon üzerine yalnızca gürültü standart sapmalarını artırır.
+extends: "../config/config.yaml"
+
+experiment:
+  name: "high_noise"
+  description: "Yüksek gürültü altında EKF dayanıklılığının ölçülmesi."
+
+sensors:
+  lidar:
+    range_noise_std: 0.15      # 0.03 -> 0.15
+    angle_noise_std: 0.010     # 0.002 -> 0.010
+    dropout_prob: 0.05         # 0.01 -> 0.05
+  imu:
+    gyro_noise_std: 0.060      # 0.015 -> 0.060
+    gyro_bias: 0.010           # 0.002 -> 0.010
+    yaw_noise_std: 0.050       # 0.010 -> 0.050
+  encoder:
+    velocity_noise_std: 0.080  # 0.020 -> 0.080
+    omega_noise_std: 0.050     # 0.010 -> 0.050
+
+localization:
+  ekf:
+    process_noise:
+      v: 0.15
+      omega: 0.10
+    measurement_noise:
+      imu_yaw_sigma: 0.10
+
+output:
+  results_dir: "outputs/results/high_noise"
+  figures_dir: "outputs/figures/high_noise"
+  log_file: "outputs/results/high_noise/run.log"

@@ -1,0 +1,58 @@
+{
+  "experiment": "high_noise",
+  "random_seed": 42,
+  "config_path": "config/config.yaml",
+  "n_obstacles": 12,
+  "env_size": [
+    50.0,
+    30.0
+  ],
+  "start": [
+    3.0,
+    3.0
+  ],
+  "goal": [
+    46.0,
+    27.0
+  ],
+  "executed_steps": 865,
+  "elapsed_seconds": 4.0137,
+  "terminated_reason": "goal_reached",
+  "collision_detected": false,
+  "goal_reached": true,
+  "final_true_pose": {
+    "x": 45.4924,
+    "y": 26.7138,
+    "theta_rad": 0.5134
+  },
+  "metrics": {
+    "dead_reckoning": {
+      "position_rmse": 7.194379343677925,
+      "position_mae": 5.241579634011829,
+      "heading_rmse": 0.4620081910055644,
+      "heading_mae": 0.36998821646160523,
+      "final_position_error": 17.586682141619505,
+      "final_heading_error": 1.100513958520386
+    },
+    "ekf": {
+      "position_rmse": 0.11108173048140603,
+      "position_mae": 0.09779662646480695,
+      "heading_rmse": 0.040083339029022336,
+      "heading_mae": 0.03066301490056716,
+      "final_position_error": 0.09235843296852998,
+      "final_heading_error": 0.08906268986744825
+    }
+  },
+  "navigation": {
+    "planner": "RRT",
+    "waypoint_count": 2,
+    "rrt_iterations": 111,
+    "rrt_tree_size": 94,
+    "stuck_detected": false
+  },
+  "sensor_noise": {
+    "lidar_range_sigma": 0.15,
+    "imu_yaw_sigma": 0.05,
+    "encoder_velocity_sigma": 0.08
+  }
+}

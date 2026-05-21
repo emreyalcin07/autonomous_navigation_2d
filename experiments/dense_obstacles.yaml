@@ -1,0 +1,27 @@
+# Bonus senaryo: yoğun engel alanı.
+# Aynı ortam boyutunda daha fazla ve görece küçük engel, daha sıkı clearance.
+extends: "../config/config.yaml"
+
+experiment:
+  name: "dense_obstacles"
+  description: "Yoğun engel alanında RRT+APF navigasyonun davranışı."
+
+environment:
+  n_obstacles: 20              # 12 -> 20
+  obstacle:
+    min_size: 1.0
+    max_size: 2.6
+    min_clearance: 1.0         # daha sıkı yerleşim için 1.2 -> 1.0
+
+navigation:
+  rrt:
+    step_size: 1.0             # daha kısa adım: dar koridorlarda yardımcı
+    max_iters: 8000
+    smoothing_iters: 400
+  apf:
+    rep_distance: 1.4          # daha sık engelde yakın itme
+
+output:
+  results_dir: "outputs/results/dense_obstacles"
+  figures_dir: "outputs/figures/dense_obstacles"
+  log_file: "outputs/results/dense_obstacles/run.log"

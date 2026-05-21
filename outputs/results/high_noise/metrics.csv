@@ -1,0 +1,3 @@
+estimator,position_rmse_m,position_mae_m,heading_rmse_rad,heading_mae_rad,final_position_error_m,final_heading_error_rad
+dead_reckoning,7.19438,5.24158,0.46201,0.36999,17.58668,1.10051
+ekf,0.11108,0.09780,0.04008,0.03066,0.09236,0.08906

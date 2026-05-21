@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(python main.py --config config/config.yaml)",
+      "PowerShell(pip install reportlab 2>&1)",
+      "PowerShell(python scripts/build_report.py)",
+      "PowerShell(python -c \"from pypdf import PdfReader; r=PdfReader\\(r'c:/Users/emrey/OneDrive/Masa�st�/autonomous_navigation_2d/report/report.pdf'\\); print\\(f'Sayfa say�s�: {len\\(r.pages\\)}'\\); print\\('---'\\); print\\(r.pages[0].extract_text\\(\\)[:600]\\)\" 2>&1)",
+      "PowerShell(pip install pypdf --quiet 2>&1)",
+      "PowerShell(python -c \"from pypdf import PdfReader; r=PdfReader\\(r'c:/Users/emrey/OneDrive/Masa�st�/autonomous_navigation_2d/report/report.pdf'\\); print\\(f'Sayfa: {len\\(r.pages\\)}'\\); print\\('---SAYFA 1---'\\); print\\(r.pages[0].extract_text\\(\\)[:800]\\)\")",
+      "PowerShell(python -c \"from pypdf import PdfReader; r=PdfReader\\(r'c:/Users/emrey/OneDrive/Masa�st�/autonomous_navigation_2d/report/report.pdf'\\); print\\('---SAYFA 9 \\(Kaynaklar\\)---'\\); print\\(r.pages[8].extract_text\\(\\)[:1200]\\)\")",
+      "PowerShell(python -c \"from pypdf import PdfReader; r=PdfReader\\(r'c:/Users/emrey/OneDrive/Masa�st�/autonomous_navigation_2d/report/report.pdf'\\); print\\('---SAYFA 10 \\(Kaynaklar + AI Beyan�\\)---'\\); print\\(r.pages[9].extract_text\\(\\)[:2000]\\)\")",
+      "PowerShell(python main.py --config experiments/high_noise.yaml 2>&1)",
+      "PowerShell(python main.py --config experiments/dense_obstacles.yaml 2>&1)",
+      "PowerShell(python main.py --config config/config.yaml 2>&1)",
+      "PowerShell(python scripts/_collect.py)"
+    ]
+  }
+}

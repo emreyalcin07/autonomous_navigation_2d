@@ -1,0 +1,66 @@
+[2026-05-21 13:27:38] [INFO] =======================================
+[2026-05-21 13:27:38] [INFO]   Simülasyon başlatılıyor: high_noise
+[2026-05-21 13:27:38] [INFO] =======================================
+[2026-05-21 13:27:38] [INFO] Zaman: 2026-05-21T13:27:38
+[2026-05-21 13:27:38] [INFO] Random seed: 42
+[2026-05-21 13:27:38] [INFO] ======================
+[2026-05-21 13:27:38] [INFO]   Yol planlama (RRT)
+[2026-05-21 13:27:38] [INFO] ======================
+[2026-05-21 13:27:39] [INFO] RRT yolu hazır: ağaç=93 düğüm, 100 iter., 4 waypoint (smoothing sonrası)
+[2026-05-21 13:27:39] [INFO] =================================
+[2026-05-21 13:27:39] [INFO]   Simülasyon koşusu: high_noise
+[2026-05-21 13:27:39] [INFO] =================================
+[2026-05-21 13:27:39] [INFO] dt=0.050s, max_steps=2400, sensörler=[LiDAR, IMU, Encoder]
+[2026-05-21 13:27:43] [INFO] Hedefe ulaşıldı, t=45.10s.
+[2026-05-21 13:27:43] [INFO] Koşum tamamlandı: 903 adım, 3.835s, sebep=goal_reached
+[2026-05-21 13:27:43] [INFO] Planlanan yol: outputs\results\high_noise\planned_path.csv (4 waypoint)
+[2026-05-21 13:27:43] [INFO] Yörünge kaydı: outputs\results\high_noise\trajectory_data.csv
+[2026-05-21 13:27:43] [INFO] Metrikler:    outputs\results\high_noise\metrics.csv
+[2026-05-21 13:27:43] [INFO] Özet:         outputs\results\high_noise\experiment_summary.json
+[2026-05-21 13:27:43] [INFO] ===========================
+[2026-05-21 13:27:43] [INFO]   Lokalizasyon metrikleri
+[2026-05-21 13:27:43] [INFO] ===========================
+[2026-05-21 13:27:43] [INFO] dead_reckoning  | konum RMSE=0.5356 m  MAE=0.4654 m  | yön RMSE=0.0819 rad  MAE=0.0673 rad
+[2026-05-21 13:27:43] [INFO] ekf             | konum RMSE=0.0648 m  MAE=0.0584 m  | yön RMSE=0.0354 rad  MAE=0.0290 rad
+[2026-05-21 13:27:43] [INFO] ==================
+[2026-05-21 13:27:43] [INFO]   Görselleştirme
+[2026-05-21 13:27:43] [INFO] ==================
+[2026-05-21 13:27:44] [INFO]   environment_map        -> outputs\figures\high_noise\environment_map.png
+[2026-05-21 13:27:44] [INFO]   trajectory_comparison  -> outputs\figures\high_noise\trajectory_comparison.png
+[2026-05-21 13:27:44] [INFO]   lidar_raw_filtered     -> outputs\figures\high_noise\lidar_raw_filtered.png
+[2026-05-21 13:27:44] [INFO]   lidar_clusters         -> outputs\figures\high_noise\lidar_clusters.png
+[2026-05-21 13:27:44] [INFO]   localization_errors    -> outputs\figures\high_noise\localization_errors.png
+[2026-05-21 13:27:44] [INFO]   rmse_mae_summary       -> outputs\figures\high_noise\rmse_mae_summary.png
+[2026-05-21 19:43:11] [INFO] =======================================
+[2026-05-21 19:43:11] [INFO]   Simülasyon başlatılıyor: high_noise
+[2026-05-21 19:43:11] [INFO] =======================================
+[2026-05-21 19:43:11] [INFO] Zaman: 2026-05-21T19:43:11
+[2026-05-21 19:43:11] [INFO] Random seed: 42
+[2026-05-21 19:43:11] [INFO] ======================
+[2026-05-21 19:43:11] [INFO]   Yol planlama (RRT)
+[2026-05-21 19:43:11] [INFO] ======================
+[2026-05-21 19:43:11] [INFO] RRT yolu hazır: ağaç=94 düğüm, 111 iter., 2 waypoint (smoothing sonrası)
+[2026-05-21 19:43:11] [INFO] =================================
+[2026-05-21 19:43:11] [INFO]   Simülasyon koşusu: high_noise
+[2026-05-21 19:43:11] [INFO] =================================
+[2026-05-21 19:43:11] [INFO] dt=0.050s, max_steps=2400, sensörler=[LiDAR, IMU, Encoder]
+[2026-05-21 19:43:15] [INFO] Hedefe ulaşıldı, t=43.20s.
+[2026-05-21 19:43:15] [INFO] Koşum tamamlandı: 865 adım, 4.014s, sebep=goal_reached
+[2026-05-21 19:43:15] [INFO] Planlanan yol: outputs\results\high_noise\planned_path.csv (2 waypoint)
+[2026-05-21 19:43:15] [INFO] Yörünge kaydı: outputs\results\high_noise\trajectory_data.csv
+[2026-05-21 19:43:15] [INFO] Metrikler:    outputs\results\high_noise\metrics.csv
+[2026-05-21 19:43:15] [INFO] Özet:         outputs\results\high_noise\experiment_summary.json
+[2026-05-21 19:43:15] [INFO] ===========================
+[2026-05-21 19:43:15] [INFO]   Lokalizasyon metrikleri
+[2026-05-21 19:43:15] [INFO] ===========================
+[2026-05-21 19:43:15] [INFO] dead_reckoning  | konum RMSE=7.1944 m  MAE=5.2416 m  | yön RMSE=0.4620 rad  MAE=0.3700 rad
+[2026-05-21 19:43:15] [INFO] ekf             | konum RMSE=0.1111 m  MAE=0.0978 m  | yön RMSE=0.0401 rad  MAE=0.0307 rad
+[2026-05-21 19:43:15] [INFO] ==================
+[2026-05-21 19:43:15] [INFO]   Görselleştirme
+[2026-05-21 19:43:15] [INFO] ==================
+[2026-05-21 19:43:16] [INFO]   environment_map        -> outputs\figures\high_noise\environment_map.png
+[2026-05-21 19:43:16] [INFO]   trajectory_comparison  -> outputs\figures\high_noise\trajectory_comparison.png
+[2026-05-21 19:43:16] [INFO]   lidar_raw_filtered     -> outputs\figures\high_noise\lidar_raw_filtered.png
+[2026-05-21 19:43:16] [INFO]   lidar_clusters         -> outputs\figures\high_noise\lidar_clusters.png
+[2026-05-21 19:43:16] [INFO]   localization_errors    -> outputs\figures\high_noise\localization_errors.png
+[2026-05-21 19:43:16] [INFO]   rmse_mae_summary       -> outputs\figures\high_noise\rmse_mae_summary.png

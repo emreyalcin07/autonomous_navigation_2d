@@ -1,0 +1,66 @@
+[2026-05-21 13:27:56] [INFO] ============================================
+[2026-05-21 13:27:56] [INFO]   Simülasyon başlatılıyor: dense_obstacles
+[2026-05-21 13:27:56] [INFO] ============================================
+[2026-05-21 13:27:56] [INFO] Zaman: 2026-05-21T13:27:56
+[2026-05-21 13:27:56] [INFO] Random seed: 42
+[2026-05-21 13:27:56] [INFO] ======================
+[2026-05-21 13:27:56] [INFO]   Yol planlama (RRT)
+[2026-05-21 13:27:56] [INFO] ======================
+[2026-05-21 13:27:57] [INFO] RRT yolu hazır: ağaç=142 düğüm, 201 iter., 3 waypoint (smoothing sonrası)
+[2026-05-21 13:27:57] [INFO] ======================================
+[2026-05-21 13:27:57] [INFO]   Simülasyon koşusu: dense_obstacles
+[2026-05-21 13:27:57] [INFO] ======================================
+[2026-05-21 13:27:57] [INFO] dt=0.050s, max_steps=2400, sensörler=[LiDAR, IMU, Encoder]
+[2026-05-21 13:28:01] [INFO] Hedefe ulaşıldı, t=43.65s.
+[2026-05-21 13:28:01] [INFO] Koşum tamamlandı: 874 adım, 4.415s, sebep=goal_reached
+[2026-05-21 13:28:01] [INFO] Planlanan yol: outputs\results\dense_obstacles\planned_path.csv (3 waypoint)
+[2026-05-21 13:28:01] [INFO] Yörünge kaydı: outputs\results\dense_obstacles\trajectory_data.csv
+[2026-05-21 13:28:01] [INFO] Metrikler:    outputs\results\dense_obstacles\metrics.csv
+[2026-05-21 13:28:01] [INFO] Özet:         outputs\results\dense_obstacles\experiment_summary.json
+[2026-05-21 13:28:01] [INFO] ===========================
+[2026-05-21 13:28:01] [INFO]   Lokalizasyon metrikleri
+[2026-05-21 13:28:01] [INFO] ===========================
+[2026-05-21 13:28:01] [INFO] dead_reckoning  | konum RMSE=1.6410 m  MAE=1.3163 m  | yön RMSE=0.0653 rad  MAE=0.0536 rad
+[2026-05-21 13:28:01] [INFO] ekf             | konum RMSE=0.0211 m  MAE=0.0187 m  | yön RMSE=0.0099 rad  MAE=0.0079 rad
+[2026-05-21 13:28:01] [INFO] ==================
+[2026-05-21 13:28:01] [INFO]   Görselleştirme
+[2026-05-21 13:28:01] [INFO] ==================
+[2026-05-21 13:28:02] [INFO]   environment_map        -> outputs\figures\dense_obstacles\environment_map.png
+[2026-05-21 13:28:02] [INFO]   trajectory_comparison  -> outputs\figures\dense_obstacles\trajectory_comparison.png
+[2026-05-21 13:28:02] [INFO]   lidar_raw_filtered     -> outputs\figures\dense_obstacles\lidar_raw_filtered.png
+[2026-05-21 13:28:02] [INFO]   lidar_clusters         -> outputs\figures\dense_obstacles\lidar_clusters.png
+[2026-05-21 13:28:02] [INFO]   localization_errors    -> outputs\figures\dense_obstacles\localization_errors.png
+[2026-05-21 13:28:02] [INFO]   rmse_mae_summary       -> outputs\figures\dense_obstacles\rmse_mae_summary.png
+[2026-05-21 19:43:17] [INFO] ============================================
+[2026-05-21 19:43:17] [INFO]   Simülasyon başlatılıyor: dense_obstacles
+[2026-05-21 19:43:17] [INFO] ============================================
+[2026-05-21 19:43:17] [INFO] Zaman: 2026-05-21T19:43:17
+[2026-05-21 19:43:17] [INFO] Random seed: 42
+[2026-05-21 19:43:17] [INFO] ======================
+[2026-05-21 19:43:17] [INFO]   Yol planlama (RRT)
+[2026-05-21 19:43:17] [INFO] ======================
+[2026-05-21 19:43:18] [INFO] RRT yolu hazır: ağaç=245 düğüm, 333 iter., 4 waypoint (smoothing sonrası)
+[2026-05-21 19:43:18] [INFO] ======================================
+[2026-05-21 19:43:18] [INFO]   Simülasyon koşusu: dense_obstacles
+[2026-05-21 19:43:18] [INFO] ======================================
+[2026-05-21 19:43:18] [INFO] dt=0.050s, max_steps=2400, sensörler=[LiDAR, IMU, Encoder]
+[2026-05-21 19:43:23] [INFO] Hedefe ulaşıldı, t=47.40s.
+[2026-05-21 19:43:23] [INFO] Koşum tamamlandı: 949 adım, 5.198s, sebep=goal_reached
+[2026-05-21 19:43:23] [INFO] Planlanan yol: outputs\results\dense_obstacles\planned_path.csv (4 waypoint)
+[2026-05-21 19:43:23] [INFO] Yörünge kaydı: outputs\results\dense_obstacles\trajectory_data.csv
+[2026-05-21 19:43:23] [INFO] Metrikler:    outputs\results\dense_obstacles\metrics.csv
+[2026-05-21 19:43:23] [INFO] Özet:         outputs\results\dense_obstacles\experiment_summary.json
+[2026-05-21 19:43:23] [INFO] ===========================
+[2026-05-21 19:43:23] [INFO]   Lokalizasyon metrikleri
+[2026-05-21 19:43:23] [INFO] ===========================
+[2026-05-21 19:43:23] [INFO] dead_reckoning  | konum RMSE=2.0502 m  MAE=1.4778 m  | yön RMSE=0.1363 rad  MAE=0.1070 rad
+[2026-05-21 19:43:23] [INFO] ekf             | konum RMSE=0.0269 m  MAE=0.0237 m  | yön RMSE=0.0116 rad  MAE=0.0090 rad
+[2026-05-21 19:43:23] [INFO] ==================
+[2026-05-21 19:43:23] [INFO]   Görselleştirme
+[2026-05-21 19:43:23] [INFO] ==================
+[2026-05-21 19:43:24] [INFO]   environment_map        -> outputs\figures\dense_obstacles\environment_map.png
+[2026-05-21 19:43:24] [INFO]   trajectory_comparison  -> outputs\figures\dense_obstacles\trajectory_comparison.png
+[2026-05-21 19:43:24] [INFO]   lidar_raw_filtered     -> outputs\figures\dense_obstacles\lidar_raw_filtered.png
+[2026-05-21 19:43:24] [INFO]   lidar_clusters         -> outputs\figures\dense_obstacles\lidar_clusters.png
+[2026-05-21 19:43:24] [INFO]   localization_errors    -> outputs\figures\dense_obstacles\localization_errors.png
+[2026-05-21 19:43:24] [INFO]   rmse_mae_summary       -> outputs\figures\dense_obstacles\rmse_mae_summary.png
