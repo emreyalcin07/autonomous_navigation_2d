@@ -288,15 +288,29 @@ yazın.
 
 ## Yapay Zeka Kullanım Beyanı
 
-Bu projede yapay zeka araçları yardımcı araç olarak kullanılmıştır.
-Proje geliştirme sürecinde OpenAI ChatGPT ve Anthropic Claude
-modellerinden; sistem mimarisinin planlanması, Python kod yapısının
-düzenlenmesi, hata ayıklama sürecinde öneriler alınması, README
-dosyasının hazırlanması ve rapor metninin akademik dile uygun şekilde
-düzenlenmesi aşamalarında destek alınmıştır. Yapay zeka araçları,
-projenin tamamını bağımsız olarak üretmek amacıyla değil; geliştirme
-sürecini desteklemek, kod yapısını daha düzenli hale getirmek, teknik
-açıklamaları iyileştirmek ve rapor dilini daha anlaşılır hâle
-getirmek amacıyla kullanılmıştır. Nihai kod, deney çıktıları,
-grafikler, hata analizleri ve raporda sunulan değerlendirmeler kontrol
-edilerek teslim edilecek hâle getirilmiştir.
+**Kullanılan yapay zeka araçları:** Anthropic Claude (Claude Opus 4.7)
+
+**Yapay zekanın katkıda bulunduğu bölümler:**
+
+- Sistem mimarisinin ve modül arayüzlerinin planlanması
+- LiDAR işleme, EKF/Kalman filtresi ve RRT planlayıcısı gibi
+  algoritmaların ilk Python taslaklarının oluşturulması
+- Kod üzerinde hata ayıklama ve refactoring önerileri
+
+**Öğrencinin kendi katkıları:**
+
+- Proje senaryosunun ve görev tanımının tasarlanması
+- Parametre ve konfigürasyon seçimleri
+- Kodların test edilmesi, çalıştırılması ve gerekli düzeltmelerin yapılması
+- Deney koşumlarının yürütülmesi ve sonuçların yorumlanması
+- Sonuç grafiklerinin, hata analizinin ve değerlendirme yorumlarının hazırlanması
+- README dosyasının hazırlanması ve düzenlenmesi
+- Rapor metninin akademik dile uygun şekilde düzenlenmesi ve nihai
+  içeriğin teslime hazır hale getirilmesi
+
+**Açıklama:** Yapay zeka araçları yardımcı araç olarak kullanılmıştır.
+Nihai kod, deney çıktıları, grafikler, hata analizleri ve raporda
+sunulan tüm sayısal değerler gerçek kod çalıştırılarak üretilmiş;
+hiçbir değer veya görsel manuel olarak uydurulmamıştır. Yapay zeka
+çıktıları öğrenci tarafından kontrol edilip gerekli düzenlemeler
+yapıldıktan sonra projeye dahil edilmiştir.
