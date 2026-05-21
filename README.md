@@ -30,7 +30,6 @@ yönetilir; aynı seedle yapılan koşumlar birebir tekrarlanabilir.
 - [Çıktılar](#çıktılar)
 - [Sonuçlar](#sonuçlar)
 - [Alternatif Senaryolar](#alternatif-senaryolar)
-- [Rapor Üretimi](#rapor-üretimi)
 - [Akademik Referanslar](#akademik-referanslar)
 - [Yapay Zeka Kullanım Beyanı](#yapay-zeka-kullanım-beyanı)
 
@@ -69,9 +68,6 @@ pip install -r requirements.txt
 
 # Baz senaryo: simülasyonu çalıştır ve tüm görselleri üret
 python main.py --config config/config.yaml
-
-# PDF raporu yeniden derle
-python scripts/build_report.py
 ```
 
 Çıktılar [`outputs/figures/`](outputs/figures) ve
@@ -126,14 +122,6 @@ Bu komut sırasıyla şu adımları yürütür:
 ```bash
 python main.py --config experiments/high_noise.yaml
 python main.py --config experiments/dense_obstacles.yaml
-```
-
-### Yalnızca PDF raporunu yeniden üretme
-
-`outputs/results/experiment_summary.json` ve figures dizini hazırsa:
-
-```bash
-python scripts/build_report.py
 ```
 
 ## Proje Yapısı
@@ -274,20 +262,6 @@ Yeni bir senaryo eklemek için `experiments/` altına bir YAML açın, baz
 dosyaya `extends:` ile referans verin ve yalnızca değişen alanları
 yazın.
 
-## Rapor Üretimi
-
-PDF rapor, gerçek koşum çıktılarından okunan metriklerle otomatik
-derlenir:
-
-```bash
-python scripts/build_report.py
-```
-
-Çıktı: [`report/report.pdf`](report/report.pdf). A4, 10 sayfa, Türkçe,
-IEEE üslubunda; 6 görsel ve metrik tabloları gömülüdür. Önce
-`python main.py` ile baz koşum yapılmalıdır; PDF üretici sayıları
-JSON özetten okur.
-
 ## Akademik Referanslar
 
 [1] V. Ušinskis, M. Nowicki, A. Dzedzickis, V. Bučinskas,
@@ -314,27 +288,15 @@ JSON özetten okur.
 
 ## Yapay Zeka Kullanım Beyanı
 
-Bu projede yapay zeka aracı olarak **Anthropic firmasının Claude** dil
-modeli, sürüm **Claude Opus 4.7** kullanılmıştır.
-
-**Yapay zekanın katkıda bulunduğu bölümler:**
-
-- Sistem mimarisinin tartışılması ve modül arayüzlerinin gözden geçirilmesi
-- Kalman filtresi ve RRT planlayıcısı gibi standart algoritmaların
-  Python taslaklarının ilk çıkarılması
-- Kod üzerinde hata ayıklama ve refactoring önerileri
-- Rapor metninin dil ve akademik üslup açısından düzenlenmesi
-
-**Öğrencinin kendi katkıları:**
-
-- Proje senaryosunun ve sistem mimarisinin tasarlanması
-- Konfigürasyon ve parametre seçimleri
-- Kodun test edilmesi, çalıştırılması ve gerekli düzeltmelerin yapılması
-- Deney koşumlarının yürütülmesi ve sonuçların yorumlanması
-- Rapor değerlendirmelerinin ve nihai içeriğin hazırlanması
-
-Raporda ve bu README'de yer alan tüm sayısal değerler (RMSE, MAE, koşum
-süresi, engel sayısı vb.) ile grafikler, gerçek kod çalıştırılarak
-`outputs/results/` ve `outputs/figures/` dizinlerine üretilmiş
-çıktılardan alınmıştır; hiçbir değer veya görsel manuel olarak
-uydurulmamıştır.
+Bu projede yapay zeka araçları yardımcı araç olarak kullanılmıştır.
+Proje geliştirme sürecinde OpenAI ChatGPT ve Anthropic Claude
+modellerinden; sistem mimarisinin planlanması, Python kod yapısının
+düzenlenmesi, hata ayıklama sürecinde öneriler alınması, README
+dosyasının hazırlanması ve rapor metninin akademik dile uygun şekilde
+düzenlenmesi aşamalarında destek alınmıştır. Yapay zeka araçları,
+projenin tamamını bağımsız olarak üretmek amacıyla değil; geliştirme
+sürecini desteklemek, kod yapısını daha düzenli hale getirmek, teknik
+açıklamaları iyileştirmek ve rapor dilini daha anlaşılır hâle
+getirmek amacıyla kullanılmıştır. Nihai kod, deney çıktıları,
+grafikler, hata analizleri ve raporda sunulan değerlendirmeler kontrol
+edilerek teslim edilecek hâle getirilmiştir.
